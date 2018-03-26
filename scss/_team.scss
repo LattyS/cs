@@ -1,0 +1,12 @@
+// Styling for the team section
+section.team {
+    .name {
+        font-size: 15px;
+        color: #707070;
+        margin: 0;
+    }
+    .function {
+        font-size: 20px;
+        color: $theme-primary;
+    }
+}

@@ -1,0 +1,42 @@
+// Styling for the reviews section
+section.reviews {
+    h2,
+    p {
+        color: white;
+    }
+    .owl-nav {
+        color: white;
+        font-size: 100px;
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 45%;
+        }
+        .owl-prev {
+            left: 100px;
+        }
+        .owl-next {
+            right: 100px;
+        }
+        [class*=owl-]:hover {
+            background: 0 0;
+        }
+    }
+    .owl-dots .owl-dot span {
+        border: 1px solid white;
+        background: transparent;
+    }
+    .owl-dots .owl-dot.active span {
+        background: white;
+    }
+    .imgWrapper {
+        width: 130px;
+        height: 130px;
+        img {
+            border: 2px solid white;
+        }
+    }
+    .reviewText {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,54 @@
+// Bootstrap overrides for this template
+.bg-primary {
+    background: $theme-primary;
+    background: -webkit-linear-gradient($theme-primary, darken($theme-primary, 5%));
+    background: linear-gradient($theme-primary, darken($theme-primary, 5%));
+}
+
+.text-primary {
+    color: $theme-primary;
+}
+
+.no-gutter>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn {
+    background-color: white;
+    color: $theme-primary;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 7px 25px;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        text-decoration: none;
+        color: #5c5cbc;
+    }
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-transform: capitalize;
+    padding: 7px 80px;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 0 2pt 2pt white;
+    }
+}
+
+form::-moz-placeholder,
+form::-webkit-input-placeholder,
+form::-ms-input-placeholder {
+    color: #C9C9C9;
+}

@@ -1,0 +1,77 @@
+// Styling for the masthead
+header.masthead {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    color: white;
+    background: url("../img/halfhead.png") no-repeat 64% 104%/auto;
+    background-color: $theme-primary !important;
+    .header-content {
+        max-width: 500px;
+        margin-bottom: 40px;
+        text-align: center;
+        h1 {
+            color: white;
+            font-size: 60px;
+        }
+        p {
+            line-height: 1.8;
+        }
+        span {
+            letter-spacing: 1px;
+        }
+        a {
+            height: 50px;
+            line-height: 36px;
+            margin-bottom: 15px;
+            position: relative;
+            img {
+                height: 28px;
+                position: absolute;
+                left: 15px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+    .device-container {
+        max-width: 325px;
+        margin-right: auto;
+        margin-left: auto;
+        .screen img {
+            border-radius: 3px;
+        }
+    }
+    @media (min-width: 992px) {
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
+        background: url("../img/halfhead.png") no-repeat 6vw bottom / 57vw;
+        background-color: $theme-primary !important;
+        .header-content {
+            text-align: left;
+            h1 {
+                font-size: 100px;
+            }
+            a {
+                margin: 0;
+                &:nth-of-type(2) {
+                    float: right;
+                }
+            }
+        }
+        .overflowhd {
+            overflow: hidden;
+        }
+        .device-container {
+            position: absolute;
+            bottom: -20%;
+            right: 0;
+            height: auto;
+            width: 75%;
+            max-width: 325px;
+        }
+    }
+}
