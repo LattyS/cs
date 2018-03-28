@@ -9,11 +9,12 @@ section.app {
             width: 75%;
         }
         .talktext {
-            padding: 1em 1em 1em 0;
+            padding: 1.5em 1.5em 1.5em 0;
             text-align: left;
             line-height: 1.5em;
             img {
                 height: 60px;
+                margin: 0 0.5em;
             }
             p {
                 /* remove webkit p margins */
@@ -81,7 +82,7 @@ section.app {
             width: 32vw;
         }
         .round-button {
-            width: 22%;
+            width: 18%;
         }
         .round-button-circle {
             font-size: 2em;
@@ -94,7 +95,7 @@ section.app {
     }
     @media (min-width: 1200px) {
         .device-container {
-            width: 17vw;
+            width: 19.5vw;
         }
     }
 }

@@ -246,13 +246,14 @@ section.app .talk-bubble:nth-of-type(2) {
 }
 
 section.app .talk-bubble .talktext {
-  padding: 1em 1em 1em 0;
+  padding: 1.5em 1.5em 1.5em 0;
   text-align: left;
   line-height: 1.5em;
 }
 
 section.app .talk-bubble .talktext img {
   height: 60px;
+  margin: 0 0.5em;
 }
 
 section.app .talk-bubble .talktext p {
@@ -323,7 +324,7 @@ section.app .device-container {
     width: 32vw;
   }
   section.app .round-button {
-    width: 22%;
+    width: 18%;
   }
   section.app .round-button-circle {
     font-size: 2em;
@@ -338,7 +339,7 @@ section.app .device-container {
 
 @media (min-width: 1200px) {
   section.app .device-container {
-    width: 17vw;
+    width: 19.5vw;
   }
 }
 
