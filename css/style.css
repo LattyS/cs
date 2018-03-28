@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: #7272E0;
+  color: #597BE8;
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
@@ -22,7 +22,7 @@ a {
 
 a:hover, a:focus, a:active, a.active {
   text-decoration: none;
-  color: #5c5cbc;
+  color: #4a67bf;
 }
 
 h1,
@@ -33,7 +33,7 @@ h5,
 h6 {
   font-family: 'Amplify', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
-  color: #7272E0;
+  color: #597BE8;
 }
 
 section {
@@ -52,7 +52,7 @@ a:focus {
 }
 
 #mainNav {
-  background-color: #7272E0;
+  background-color: #597BE8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: right;
   -webkit-transition: all .35s;
@@ -69,7 +69,7 @@ a:focus {
 }
 
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-  color: #4848d7;
+  color: #2c57e2;
 }
 
 #mainNav .navbar-brand > img {
@@ -89,7 +89,7 @@ a:focus {
 }
 
 #mainNav .navbar-nav > li > a.active {
-  color: #7272E0 !important;
+  color: #597BE8 !important;
   background-color: transparent;
 }
 
@@ -110,7 +110,7 @@ a:focus {
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
-    background-color: #7272E0;
+    background-color: #597BE8;
   }
   #mainNav .navbar-brand {
     color: fade(white, 70%);
@@ -130,18 +130,18 @@ a:focus {
     background-color: white;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #7272E0;
+    color: #597BE8;
   }
   #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
-    color: #7272E0;
+    color: #597BE8;
   }
   #mainNav.navbar-shrink .navbar-nav > li > a,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus {
-    color: #7272E0;
+    color: #597BE8;
   }
   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-    color: #7272E0;
+    color: #597BE8;
   }
 }
 
@@ -152,7 +152,7 @@ header.masthead {
   padding-bottom: 40px;
   color: white;
   background: url("../img/halfhead.png") no-repeat 64% 104%/auto;
-  background-color: #7272E0 !important;
+  background-color: #597BE8 !important;
 }
 
 header.masthead .header-content {
@@ -206,7 +206,7 @@ header.masthead .device-container .screen img {
     padding-top: 0;
     padding-bottom: 0;
     background: url("../img/halfhead.png") no-repeat 6vw bottom/57vw;
-    background-color: #7272E0 !important;
+    background-color: #597BE8 !important;
   }
   header.masthead .header-content {
     text-align: left;
@@ -230,6 +230,115 @@ header.masthead .device-container .screen img {
     height: auto;
     width: 75%;
     max-width: 325px;
+  }
+}
+
+section.app .talk-bubble {
+  position: relative;
+  height: auto;
+  background-color: #597BE8;
+  border-radius: 30px;
+  color: white;
+}
+
+section.app .talk-bubble:nth-of-type(2) {
+  width: 75%;
+}
+
+section.app .talk-bubble .talktext {
+  padding: 1em 1em 1em 0;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+section.app .talk-bubble .talktext img {
+  height: 60px;
+}
+
+section.app .talk-bubble .talktext p {
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  overflow: hidden;
+}
+
+section.app .talk-bubble:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  right: auto;
+  top: auto;
+  bottom: -2px;
+  border: 22px solid;
+  border-color: transparent transparent transparent #597BE8;
+}
+
+section.app .round-button-circle {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 35px;
+  border: 1px solid grey;
+  overflow: hidden;
+  background: transparent;
+  color: gray;
+  cursor: pointer;
+  padding: 50% 0;
+}
+
+section.app .round-button-circle:hover, section.app .round-button-circle:focus, section.app .round-button-circle:active, section.app .round-button-circle.active {
+  border: 1px solid #597BE8;
+  text-decoration: none;
+  color: #4a67bf;
+  box-shadow: 0 0 2pt 2pt #597BE8;
+}
+
+section.app .round-button-circle .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+section.app .active {
+  border: 1px solid #597BE8;
+  text-decoration: none;
+  color: #4a67bf;
+  box-shadow: 0 0 2pt 2pt #597BE8;
+}
+
+section.app .device-container {
+  max-width: 325px;
+}
+
+@media (min-width: 768px) {
+  section.app .device-container {
+    width: 32vw;
+  }
+  section.app .round-button {
+    width: 22%;
+  }
+  section.app .round-button-circle {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  section.app .device-container {
+    width: 22vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.app .device-container {
+    width: 17vw;
   }
 }
 
@@ -291,7 +400,7 @@ section.team .name {
 
 section.team .function {
   font-size: 20px;
-  color: #7272E0;
+  color: #597BE8;
 }
 
 section.contact {
@@ -320,27 +429,22 @@ footer ul {
 
 footer ul li a {
   font-size: 50px;
-  color: #7272E0;
+  color: #597BE8;
 }
 
 .bg-primary {
-  background: #7272E0;
-  background: -webkit-linear-gradient(#7272E0, #5d5ddb);
-  background: linear-gradient(#7272E0, #5d5ddb);
+  background: #597BE8;
+  background: -webkit-linear-gradient(#597BE8, #4369e5);
+  background: linear-gradient(#597BE8, #4369e5);
 }
 
 .text-primary {
-  color: #7272E0;
-}
-
-.no-gutter > [class*='col-'] {
-  padding-right: 0;
-  padding-left: 0;
+  color: #597BE8;
 }
 
 .btn {
   background-color: white;
-  color: #7272E0;
+  color: #597BE8;
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
@@ -349,7 +453,7 @@ footer ul li a {
 
 .btn:hover, .btn:focus, .btn:active, .btn.active {
   text-decoration: none;
-  color: #5c5cbc;
+  color: #4a67bf;
 }
 
 .btn-outline {
@@ -365,6 +469,25 @@ footer ul li a {
   text-decoration: none;
   color: white;
   box-shadow: 0 0 2pt 2pt white;
+}
+
+.btn-circle {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 35px;
+  line-height: 35px;
+  border-radius: 50px;
+  background: transparent;
+  border: 1px solid grey;
+  color: gray;
+}
+
+.btn-circle:hover, .btn-circle:focus, .btn-circle:active, .btn-circle.active {
+  border: 1px solid #597BE8;
+  text-decoration: none;
+  color: #4a67bf;
+  box-shadow: 0 0 2pt 2pt #597BE8;
 }
 
 form::-moz-placeholder,

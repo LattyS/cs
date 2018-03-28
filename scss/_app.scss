@@ -1,0 +1,100 @@
+section.app {
+    .talk-bubble {
+        position: relative;
+        height: auto;
+        background-color: $theme-primary;
+        border-radius: 30px;
+        color: white;
+        &:nth-of-type(2) {
+            width: 75%;
+        }
+        .talktext {
+            padding: 1em 1em 1em 0;
+            text-align: left;
+            line-height: 1.5em;
+            img {
+                height: 60px;
+            }
+            p {
+                /* remove webkit p margins */
+                -webkit-margin-before: 0em;
+                -webkit-margin-after: 0em;
+                overflow: hidden;
+            }
+        }
+    }
+    .talk-bubble:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0px;
+        right: auto;
+        top: auto;
+        bottom: -2px;
+        border: 22px solid;
+        border-color: transparent transparent transparent $theme-primary;
+    }
+    .round-button-circle {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 35px;
+        border: 1px solid grey;
+        overflow: hidden;
+        background: transparent;
+        color: gray;
+        cursor: pointer;
+        padding: 50% 0;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            border: 1px solid $theme-primary;
+            text-decoration: none;
+            color: #4a67bf;
+            box-shadow: 0 0 2pt 2pt $theme-primary;
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+        }
+    }
+    .active {
+        border: 1px solid $theme-primary;
+        text-decoration: none;
+        color: #4a67bf;
+        box-shadow: 0 0 2pt 2pt $theme-primary;
+    }
+    .device-container {
+        max-width: 325px;
+    }
+    @media (min-width: 768px) {
+        .device-container {
+            width: 32vw;
+        }
+        .round-button {
+            width: 22%;
+        }
+        .round-button-circle {
+            font-size: 2em;
+        }
+    }
+    @media (min-width: 992px) {
+        .device-container {
+            width: 22vw;
+        }
+    }
+    @media (min-width: 1200px) {
+        .device-container {
+            width: 17vw;
+        }
+    }
+}

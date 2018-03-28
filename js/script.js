@@ -39,8 +39,45 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  // Carousel
-  $('.owl-carousel').owlCarousel({
+  //App screens and texts
+
+  var topTexts = {
+    topText1: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    topText2: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    topText3: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    topText4: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+  }
+
+  var bottomTexts = {
+    bottomText1: "1 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto",
+    bottomText2: "2 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto",
+    bottomText3: "3 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto",
+    bottomText4: "4 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto"
+
+  }
+
+  $(".appScreenButton").click(function () {
+    var screenNbr = $(this).data('nbr');
+    if (!$(this).hasClass('active')) {
+      $(".appScreenButton").removeClass('active');
+      $(this).addClass('active');
+      $("#appScreen")
+        .fadeOut(200, function () {
+          $("#appScreen").attr('src', "img/screens/screen-" + screenNbr + ".jpg");
+        })
+        .fadeIn(200);
+      $("#appTopText").fadeOut(200, function () {
+        $(this).text(topTexts["topText" + screenNbr])
+      }).fadeIn(200);
+
+      $("#appBottomText").fadeOut(200, function () {
+        $(this).text(bottomTexts["bottomText" + screenNbr])
+      }).fadeIn(200);
+    }
+  });
+
+  // Carousels
+  $('.reviews-carousel').owlCarousel({
     items: 1,
     loop: true,
     autoplay: true,
@@ -54,7 +91,7 @@
       },
       600: {
         nav: true,
-        navText: ["<img src='../img/leftarrow.png'>","<img src='../img/rightarrow.png'>"]
+        navText: ["<img src='../img/leftarrow.png'>", "<img src='../img/rightarrow.png'>"]
       }
     }
   })

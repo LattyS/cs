@@ -9,11 +9,6 @@
     color: $theme-primary;
 }
 
-.no-gutter>[class*='col-'] {
-    padding-right: 0;
-    padding-left: 0;
-}
-
 .btn {
     background-color: white;
     color: $theme-primary;
@@ -26,7 +21,7 @@
     &:active,
     &.active {
         text-decoration: none;
-        color: #5c5cbc;
+        color: #4a67bf;
     }
 }
 
@@ -44,6 +39,27 @@
         text-decoration: none;
         color: white;
         box-shadow: 0 0 2pt 2pt white;
+    }
+}
+
+.btn-circle {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 35px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid grey;
+    color: gray;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        border: 1px solid $theme-primary;
+        text-decoration: none;
+        color: #4a67bf;
+        box-shadow: 0 0 2pt 2pt $theme-primary;
     }
 }
 

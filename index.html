@@ -16,7 +16,8 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 
   <!-- Custom styles for this template -->
@@ -34,12 +35,12 @@
         <img src="img/whitehead.png" class="d-inline-block align-top" alt="Captain Shop logo">Captain Shop</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i>
+        <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#download">L'application</a>
+            <a class="nav-link js-scroll-trigger" href="#app">L'application</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#reviews">Avis</a>
@@ -78,8 +79,7 @@
             <div class="device-mockup iphone6_plus portrait white">
               <div class="device">
                 <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                  <img src="img/screens/header-screen-1.jpg" class="img-fluid" alt="Today screen">
                 </div>
               </div>
             </div>
@@ -89,10 +89,66 @@
     </div>
   </header>
 
-  <section class="download text-center" id="download">
+  <section class="app text-center" id="app">
     <div class="container">
       <div class="section-heading text-center">
         <h2 class="mb-4">L'application</h2>
+      </div>
+
+      <div class="row">
+
+        <div class="col-9 col-md-4 my-auto">
+          <div class="device-container mx-auto">
+            <div class="device-mockup iphone6_plus portrait white">
+              <div class="device">
+                <div class="screen">
+                  <img src="img/screens/screen-1.jpg" class="img-fluid" alt="screens" id="appScreen">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3 col-md-6 offset-md-2 d-flex flex-column justify-content-around justify-content-md-between">
+          <div class="talk-bubble mb-4 d-none d-md-block">
+            <div class="talktext">
+              <img src="img/head.png" alt="Captain Shop head" class="float-left">
+              <p id="appTopText">1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div>
+          <div class="talk-bubble mb-5 d-none d-md-block">
+            <div class="talktext">
+              <img src="img/head.png" alt="Captain Shop head" class="float-left">
+              <p id="appBottomText">1 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between justify-content-sm-around flex-column flex-md-row">
+            <div class="round-button mb-3">
+              <div class="round-button-circle appScreenButton active" data-nbr="1" data-url="img/screens/screen-1.jpg">
+                <i class="far fa-user icon"></i>
+              </div>
+            </div>
+            <div class="round-button mb-3">
+              <div class="round-button-circle appScreenButton" data-nbr="2" data-url="img/screens/screen-2.jpg">
+                <i class="fas fa-utensils icon"></i>
+              </div>
+            </div>
+            <div class="round-button mb-3">
+              <div class="round-button-circle appScreenButton" data-nbr="3" data-url="img/screens/screen-3.jpg">
+                <i class="fas fa-shopping-basket icon"></i>
+              </div>
+            </div>
+            <div class="round-button mb-3">
+              <div class="round-button-circle appScreenButton" data-nbr="4" data-url="img/screens/screen-4.jpg">
+                <i class="fas fa-barcode icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -103,7 +159,7 @@
         <h2 class="mb-4">Avis</h2>
       </div>
 
-      <div class="owl-carousel owl-theme">
+      <div class="owl-carousel reviews-carousel owl-theme">
         <div class="text-center item">
           <div class="imgWrapper mx-auto mb-3">
             <img src="img/reviews/remy.jpg" class="rounded-circle img-fluid" alt="Avis 3">
@@ -188,7 +244,7 @@
           </div>
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" id="inputMail" placeholder="Adresse mail">
+          <input type="text" class="form-control" id="inputMail" placeholder="Adresse mail">
         </div>
         <div class="form-group">
           <textarea class="form-control" id="inputMessage" rows="3" placeholder="Message"></textarea>
@@ -203,12 +259,12 @@
       <ul class="list-inline list-social">
         <li class="list-inline-item social-twitter">
           <a href="https://twitter.com/CaptainShopApp" target="_blank">
-            <i class="fa fa-twitter-square"></i>
+            <i class="fab fa-twitter-square"></i>
           </a>
         </li>
         <li class="list-inline-item social-facebook">
           <a href="https://www.facebook.com/captainshopapp/" target="_blank">
-            <i class="fa fa-facebook-square"></i>
+            <i class="fab fa-facebook-square"></i>
           </a>
         </li>
       </ul>
